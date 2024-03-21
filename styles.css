@@ -1,13 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Ysabeau Infant", sans-serif;
 }
 /* aprendiendo a ordenar y reducir el código, a comparación del formulario anterior sunset */
 body,
-.contenedor {
+footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
 }
@@ -15,9 +16,131 @@ body,
 body {
   height: 100vh;
   width: 100%;
+  background: conic-gradient(
+      from -60deg at 50% calc(100% / 3),
+      #c0b9af 0 120deg,
+      #0000 0
+    ),
+    conic-gradient(from 120deg at 50% calc(200% / 3), #c0b9af 0 120deg, #0000 0),
+    conic-gradient(
+      from 60deg at calc(200% / 3),
+      #c0b9af 60deg,
+      #675740 0 120deg,
+      #0000 0
+    ),
+    conic-gradient(
+      from 180deg at calc(100% / 3),
+      #341f00 60deg,
+      #c0b9af 0 120deg,
+      #0000 0
+    ),
+    linear-gradient(
+      90deg,
+      #341f00 calc(100% / 6),
+      #675740 0 50%,
+      #341f00 0 calc(500% / 6),
+      #675740 0
+    );
+  background-size: 8.25rem 4.75rem;
 }
 
 .contenedor {
   height: 50%;
   width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: right;
+  background-color: #e0dcd7;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+#logo {
+  height: 180px;
+  width: 300px;
+}
+
+form,
+fieldset {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border: none;
+}
+
+legend {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-bottom: 1.25rem;
+  padding: 0.3125rem;
+  color: #341f00;
+}
+
+input,
+input:focus {
+  width: 60%;
+  border: none;
+  outline: none;
+  border-bottom: 0.125rem solid #341f00;
+  background-color: transparent;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 0.625rem 0rem;
+}
+
+label {
+  color: #341f00;
+  font-weight: bolder;
+}
+
+button {
+  padding: 0.625rem;
+  margin-top: 20%;
+  border: none;
+  background-color: #341f00;
+  color: #c0b9af;
+}
+button:hover {
+  background-color: #c0b9af;
+  color: #341f00;
+}
+
+footer {
+  background-color: #c0b9af;
+  width: 280px;
+  height: 100px;
+  border: 5px double #341f00;
+}
+
+a {
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+a:visited {
+  color: #675740;
+}
+
+a:hover {
+  color: black;
+}
+@media (max-width: 1024px) {
+  #logo {
+    height: 120px;
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+  }
+  footer {
+    width: 200px;
+  }
+  a {
+    font-size: 1rem;
+  }
 }
